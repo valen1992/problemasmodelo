@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Jugadores, Tecnicos, Clubes
+from modelos.models import Jugadores, Tecnicos, Clubes
 
 
 def create_jugador(request):
@@ -29,9 +29,6 @@ def list_clubes(request):
         "clubes" : all_clubes
          }
     return render(request, "list_clubes.html", context=context)
-
-
-
 
 
 def create_tecnico(request):
